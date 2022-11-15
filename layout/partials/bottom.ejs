@@ -1,9 +1,9 @@
-<footer id="footer">
+<footer id="bottom">
     <div id="bottom-left">
         <%# 网页底部版权年份计算 %>
-        <% if (theme.copyright){ %>
+        <% if (theme.copyright.enable){ %>
             <% var copyrightString = "Copyright © " %>
-            <%= copyrightString + String(config.title) %>
+            <%= copyrightString + String(theme.copyright.author) %>
             <% var startYear = Number(theme.copyright.begin_year) ? theme.copyright.begin_year : new Date().getFullYear() %>
             <% var endYear = Number(theme.copyright.end_year) ? theme.copyright.end_year : new Date().getFullYear() %>
             <% var copyrightYear = String(startYear + " - " + endYear) %>
@@ -14,7 +14,7 @@
         <%# ICP备案号显示 %>
         <% if (theme.icp_setting.enable) { %>
             <% var icpNum = (theme.icp_setting.icp) ? theme.icp_setting.icp : new String() %>
-            <p>ICP备案号: <a href="https://beian.miit.gov.cn/"><%= icpNum %></a></p>
+            <div id="icp"> ICP备案号: <a href="https://beian.miit.gov.cn/"><%= icpNum %></a></div>
         <% } %>
 
         <%# 公安备案号显示 %>
@@ -23,32 +23,32 @@
             <% var GonganString = "公安备案号: " %>
             <%# 是否显示备案图标 %>
             <% if (theme.gongan_setting.Icon_enanle){ %>
-                <%= GonganString %><img src=".\img\gongan.png"><a
-                        href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a>
+                <div id="gongan"><%= GonganString %><img src=".\img\gongan.png"><a href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a></div>
             <% }else { %>
-                <%= GonganString %><a href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a>
+                <div id="gongan"><%= GonganString %><a href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a></div>
             <% } %>
         <% } %>
+
+        <%# 底部云存储服务支持显示 %>
+        <% if (theme.support_setting.enable){ %>
+            <% var link = (theme.support_setting.support_link) ? theme.support_setting.support_link : new String() %>
+            <% var img_src = "./img" + theme.support_setting.img_src %>
+            <% var img_height = (theme.support_setting.height) ? theme.support_setting.height : new String() %>
+            <% var img_width = (theme.support_setting.width) ? theme.support_setting.width : new String() %>
+            <div id="support"><%= "本网站由 " %> <a href=<%= link %>><img src=<%= img_src %> width=<%= img_width %> height=<%= img_height %>></a><%= " 提供 CDN 加速/云存储服务" %></p>
+        <% } %>
+
     </div>
 
     <div id="bottom-center">
 
 
+    </div>
 
+    <div id="bottom-right">
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </footer>

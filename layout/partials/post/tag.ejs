@@ -1,0 +1,26 @@
+
+<div id="tag">
+    <% if (page.tags){ %>
+        <% var Tags = page.tags %>
+        <div class="tag-item">
+            <%- list_tags(page.tags,{show_count: false, style: 'link'}) %>
+        </div>
+    <% } %>
+
+
+
+<!--  <%# page.posts.each(article => { %>-->
+<!--    <div class="tag-item">-->
+<!--      <a href="<%#=url_for(article.path)%>">-->
+<!--        <%#=article.title%>-->
+<!--      </a>-->
+<!--      <time datetime="<%#=date_xml(article.date)%>">-->
+<!--        <%#=date(article.date)%>-->
+<!--      </time>-->
+<!--    </div>-->
+<!--  <%# }) %>-->
+</div>
+
+<!--<div id="paginator">-->
+<!--  <%#-paginator()%>-->
+<!--</div>-->

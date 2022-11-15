@@ -1,11 +1,11 @@
 <%
-var pageTitle = page.title || config.subtitle || '';
+var pageTitle = page.title || '';
 if (is_archive()) pageTitle = 'Archives';
-if (is_tag()) pageTitle = 'Tag: ' + page.tag;
-if (is_category()) pageTitle = 'Category: ' + page.category;
-if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_tag()) pageTitle = 'Tag: ' + page.tag + ": ";
+if (is_category()) pageTitle = 'Category: ' + page.category + ": ";
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year + "/";
 if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
+pageTitle += config.title ;
 %>
 
 <!DOCTYPE html>
@@ -21,15 +21,6 @@ pageTitle += ' [ ' + config.title + ' ]';
     <% } %>
 </head>
 <body>
-
-<div id="menu-outer">
-    <div id="menu-inner">
-        <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%= theme.menu[key] %>"><%= key %></a>
-        <% }); %>
-    </div>
-</div>
-
 <div id="content-outer">
     <div id="content-inner">
         <%- body %>

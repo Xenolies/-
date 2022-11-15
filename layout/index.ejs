@@ -1,23 +1,60 @@
+<div id="site-outer">
+    <div id="site-inner">
+        <%# 网站标题 %>
 
-<%# -partial('partials/recent-posts')%>
+        <% if (theme.logo.enable) { %>
+            <% var logo_src = theme.logo.src %>
+            <% var logo_width = theme.logo.width %>
+            <% var logo_height = theme.logo.height %>
+            <img id="site-logo" src=<%= logo_src %> width=<%= logo_width %> height=<% logo_height %>>
+        <% } %>
+        <h1 id="site-title"><%= config.title %></h1>
+    </div>
+</div>
 
-<% if (page.posts.length > 0) { %>
-    <div id="site-titles">
-        <div id="site-title">
-            <h1 id="site-title-text"><%= config.title %></h1>
-        </div>
-        <div id="site-subtitle">
-            <h2 id="site-subtitle-text"><%= config.subtitle %> </h2>
+
+<div class="line-left">
+    <div id="menu-outer">
+        <div id="menu-inner">
+            <% Object.keys(theme.menu).forEach(key => { %>
+                <ol class="menu-item"><a href="<%= theme.menu[key] %>" target="_blank"><%= key %></a></ol>
+            <% }); %>
         </div>
     </div>
+</div>
+
+<div id="line-right">
+
+
+</div>
+
+
+<div id="find_me">
+
+
+</div>
 
 
 
 
 
-<% } %>
+<div id="menu-outer">
+    <div id="menu-inner">
+        <% Object.keys(theme.menu).forEach(key => { %>
+            <div class="menu-item"><a href="<%= theme.menu[key] %>" target="_blank"><%= key %></a></div>
+        <% }); %>
+    </div>
+</div>
+
+<%# if (page.posts.length > 0) { %>
+<!--    <div id="site-titles">-->
+<!--        <div id="site-title">-->
+<!--            <h1 id="site-title-text"><%#= config.title %></h1>-->
+<!--        </div>-->
+<!--        <div id="site-subtitle">-->
+<!--            <h2 id="site-subtitle-text"><%#= config.subtitle %> </h2>-->
+<!--        </div>-->
+<!--    </div>-->
+<%# } %>
 
 <%- partial('partials/bottom') %>
-<!--<div id="paginator">-->
-<!--  <%#- paginator()%>-->
-<!--</div>-->

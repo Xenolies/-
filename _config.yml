@@ -1,37 +1,66 @@
-
 # html lang
 language: en
+
+
+#网站作者
+site-author: John Doe
 
 # main menu navigation
 menu:
   Home: /
   About: /about
-  Contact: /contact
   Archives: /archives
+  Links: /friend_links
 
-index_post_max: 10
 
+
+social:
+  github: "https://github.com/Xenolies"
+  bilibili: "https://github.com/Xenolies"
+
+
+
+logo:
+  enable: false
+  width: 50
+  height: 50
+  src: /img/logo.png
+  #gravatar: false
+  #grayout: true
+
+
+
+#版权年份显示
 copyright:
+  enable: ture
   author: John Doe
   begin_year: 2022
-  end_year:  2025
+  end_year: 2025
 
-
+#底部ICP备案显示
 icp_setting:
-  enable : true
+  enable: ture
   icp: "冀ICP备2022002123号-1"
 
-
+#底部公安备案显示
 gongan_setting:
-  enable : true
+  enable: ture
   Icon_enanle: true
   Num: "京公网安备 11010102002019号"
+
+#底部云服务提供商显示
+support_setting:
+  enable: ture
+  img_src: /upyun.png
+  support_link: "https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
+  width: 30
+  height: 11
 
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/Diamond.css
+  - /css/Diamond.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/Diamond.js
+  - /js/Diamond.js
