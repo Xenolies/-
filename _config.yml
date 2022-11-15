@@ -19,13 +19,13 @@ copyright:
 
 icp_setting:
   enable : true
-  icp: "冀ICP备2022002123号-1"
+  icp: ""
 
 
 gongan_setting:
   enable : true
   Icon_enanle: true
-  Num: "京公网安备 11010102002019号"
+  Num: ""
 
 
 # stylesheets loaded in the <head>
