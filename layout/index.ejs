@@ -1,0 +1,23 @@
+
+<%# -partial('partials/recent-posts')%>
+
+<% if (page.posts.length > 0) { %>
+    <div id="site-titles">
+        <div id="site-title">
+            <h1 id="site-title-text"><%= config.title %></h1>
+        </div>
+        <div id="site-subtitle">
+            <h2 id="site-subtitle-text"><%= config.subtitle %> </h2>
+        </div>
+    </div>
+
+
+
+
+
+<% } %>
+
+<%- partial('partials/bottom') %>
+<!--<div id="paginator">-->
+<!--  <%#- paginator()%>-->
+<!--</div>-->

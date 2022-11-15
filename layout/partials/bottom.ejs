@@ -1,0 +1,54 @@
+<footer id="footer">
+    <div id="bottom-left">
+        <%# 网页底部版权年份计算 %>
+        <% if (theme.copyright){ %>
+            <% var copyrightString = "Copyright © " %>
+            <%= copyrightString + String(config.title) %>
+            <% var startYear = Number(theme.copyright.begin_year) ? theme.copyright.begin_year : new Date().getFullYear() %>
+            <% var endYear = Number(theme.copyright.end_year) ? theme.copyright.end_year : new Date().getFullYear() %>
+            <% var copyrightYear = String(startYear + " - " + endYear) %>
+            <%# 输出版权年份 %>
+            <%= copyrightYear %>
+        <% } %>
+
+        <%# ICP备案号显示 %>
+        <% if (theme.icp_setting.enable) { %>
+            <% var icpNum = (theme.icp_setting.icp) ? theme.icp_setting.icp : new String() %>
+            <p>ICP备案号: <a href="https://beian.miit.gov.cn/"><%= icpNum %></a></p>
+        <% } %>
+
+        <%# 公安备案号显示 %>
+        <% if (theme.gongan_setting.enable){ %>
+            <% var GonganNum = (theme.gongan_setting.Num) ? theme.gongan_setting.Num : new String() %>
+            <% var GonganString = "公安备案号: " %>
+            <%# 是否显示备案图标 %>
+            <% if (theme.gongan_setting.Icon_enanle){ %>
+                <%= GonganString %><img src=".\img\gongan.png"><a
+                        href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a>
+            <% }else { %>
+                <%= GonganString %><a href="http://www.beian.gov.cn/portal/index.do"><%= GonganNum %> </a>
+            <% } %>
+        <% } %>
+    </div>
+
+    <div id="bottom-center">
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>

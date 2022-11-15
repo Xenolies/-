@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background: #2b2b2b;
+  color: #bbb;
+}
+#menu-inner a {
+  color: #fa5b2c;
+}
+#bottom-inner a {
+  color: #fa5b2c;
+}
+#site-title {
+  text-align: center;
+  font-size: x-large;
+  font-family: ;
+}
+#site-subtitle {
+  text-align: center;
+  font-size: medium;
+}

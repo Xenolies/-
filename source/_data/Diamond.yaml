@@ -1,0 +1,26 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+copyright:
+  author: John Doe
+  begin_year: 2022
+  end_year:  2025
+
+
+index_post_max: 20
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/Diamond.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/Diamond.js
