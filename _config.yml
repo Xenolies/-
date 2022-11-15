@@ -27,6 +27,14 @@ gongan_setting:
   Icon_enanle: true
   Num: "京公网安备 11010102002019号"
 
+support_setting:
+  enable: true
+  img_src: /upyun.png
+  height: 11
+  width: 30
+  support_link: ""
+
+
 
 # stylesheets loaded in the <head>
 stylesheets:
